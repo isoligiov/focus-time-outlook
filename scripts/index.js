@@ -29,7 +29,7 @@ let initialState = true;
         if(preview !== previousState[header]?.preview) {
           const previewText = (preview || "").replace('`', '"').split(/[\r\n]/g).filter(line => line.length > 0).map(line => `\`${line}\``).join("\n")
           text += `*${header} @ ${PROJECT_NAME}* sent email!
-${previewText}`
+${previewText}\n`
         }
       }
       if(text.length > 0) {
